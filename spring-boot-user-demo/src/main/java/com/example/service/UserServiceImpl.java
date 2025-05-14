@@ -1,16 +1,12 @@
 package com.example.service;
 import com.example.repo.FakeRepoInterface;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-
 
 @Service
 public class UserServiceImpl implements UserService {
     private final FakeRepoInterface fakeRepo;
-    private long userId = 1L; 
+    private final long userId = 1; 
     
-
-    @Autowired
     public UserServiceImpl(FakeRepoInterface fakeRepo) {
         this.fakeRepo = fakeRepo;
     }
@@ -18,20 +14,16 @@ public class UserServiceImpl implements UserService {
     @Override
     public String addUser(String name, String surname) {
         fakeRepo.insertUser(userId, name, surname);
-        String message = name + " added";
-        System.out.println(message);
-        return message;
+        return name + " added";  
     }
     
     @Override
     public String removeUser(long id) {
-        
-        
-        return fakeRepo.deleteUser(id) + "removed";
+        return fakeRepo.deleteUser(userId) + " removed";  // Added space before "removed"
     }
     
     @Override
     public String getUser(long id) {
-       return "Hello" + fakeRepo.findUserById(id);
+       return "Hello " + fakeRepo.findUserById(userId);  // Added space after "Hello"
     }
 }
