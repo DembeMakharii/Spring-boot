@@ -23,18 +23,18 @@ A simple Spring Boot application demonstrating MVC architecture, Dependency Inje
   - Remove user: Prints `[name] removed`
 
 ## Project Structure
-spring-boot-user-demo/ <br />
 ├── src/ <br />
 │ ├── main/ <br />
-│ │ └── java/com/example/demo/ <br />
-│ │ ├── model/User.java <br />
-│ │ ├── repo/FakeRepo.java <br />
-│ │ ├── service/UserServiceImpl.java <br />
-│ │ └── DemoApplication.java <br />
+│ │ ├── java/com/example/demo/ <br />
+│ │ │ ├── DemoApplication.java <br />
+│ │ │ ├── model/User.java <br />
+│ │ │ ├── repo/FakeRepoInterface.java <br />
+│ │ │ ├── repo/FakeRepo.java <br />
+│ │ │ ├── service/UserService.java <br />
+│ │ │ ├── service/UserServiceImpl.java <br />
 │ └── test/ <br />
-│ └── java/com/example/demo/service/UserServiceTests.java <br />
-├── build.gradle <br />
-└── README.md <br />
+│ └── java/com/example/demo/ <br />
+│ └── service/UserServiceTests.java <br />
 
 
 ## Technologies
